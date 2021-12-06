@@ -3,6 +3,10 @@
 
 {% block link %}<link src='{% static "css/homepage/carousel.css" %}'> {% endblock link %}
 
+     <title>
+	 <img src="{% static 'img/logo/ANGELMEDIALOGO.png' %}" class="card-img" alt="...">
+	 {% block title %}Angel's Media{% endblock title %}</title>
+
 {% block content %}
 
     <div class="container">
@@ -10,17 +14,17 @@
 			<div class="col-md-8 themed-grid-col">
 				<div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
 					<div class="container">
-						  <h1 class="display-3">Hello Angel's Media</h1>
-						  <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-						  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+						  <h1 class="display-3">Black Tears Audition</h1>
+						  <p> The black tears audition form is about to be realeased. Once it is released, it will be updated here. </p>
+						  <p><a class="btn btn-primary btn-lg" href="{% url 'audition' %}" role="button">Get the audition form now</a></p>
 					</div>
 				 </div>
 				 <br/>
 				 <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
 					<div class="container">
-						  <h1 class="display-3">Hello Angel's Media</h1>
-						  <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-						  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+						  <h1 class="display-3">Black Tears Audition Form Released???🤗</h1>
+						  <p>The black tears audition form has been released. This form is only for the students of university of Nigeria. This is a rare opportunity to show case your talent if you know how to act. Once it is exceed 100  people, this form will cease to excist </p>
+						  <p><a class="btn btn-primary btn-lg" href="#" role="button">Apply For The Audition</a></p>
 					</div>
 				 </div>
 			</div>
@@ -78,9 +82,9 @@
     
 		<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column text-center text-white rounded bg-secondary">
 			<h1 class="cover-heading">About Angel's Media</h1>
-			<p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+			<p class="lead">Angel's media started in the year 2001. The organization is concerned with harvesting young talents and skills. Angel's media is mainly associat... </p>
 			<p class="lead">
-				<a href="#" class="btn btn-lg btn-dark">Find Out More</a>
+				<a href="{% url 'about' %}" class="btn btn-lg btn-dark">Find Out More</a>
 			</p>
 		</div>
 	<br/>
@@ -164,7 +168,7 @@
 
 				<div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
 				  <div class="col">
-					<div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('unsplash-photo-1.jpg');">
+					<div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg john" style="background-image: url('/static/backgroundimage/photo_2018-10-28_21-53-08.jpg') 50% 0 no-repeat fixed; color:white; height:300px; padding: 100px 0 0 0;">
 					  <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
 						<h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Studio Stuff that will happen</h2>
 						<ul class="d-flex list-unstyled mt-auto">
@@ -177,7 +181,7 @@
 				  </div>
 
 				  <div class="col">
-					<div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('unsplash-photo-2.jpg');">
+					<div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('/static/backgroundimage/photo_2018-10-28_21-53-08.jpg')50% 0 no-repeat fixed; color:white; height:300px; padding: 100px 0 0 0;">
 					  <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
 						<h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Theater stuff that will go down</h2>
 						<ul class="d-flex list-unstyled mt-auto">
@@ -190,7 +194,7 @@
 				  </div>
 
 				  <div class="col">
-					<div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('unsplash-photo-3.jpg');">
+					<div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('/static/Backgroundimage/photo_2018-10-28_21-53-08.jpg')50% 0 no-repeat fixed; color:white; height:300px; padding: 100px 0 0 0;">
 					  <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
 						<h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Party Stuff that will go down</h2>
 						<ul class="d-flex list-unstyled mt-auto">

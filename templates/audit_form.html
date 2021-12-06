@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %} Black Tears Audition Form {% endblock %}
+
+{% block content %}
+<div class="container">
+	{% if sent %}
+		<h3> Application Has Been Successfully Sent </h3>
+		<br/>
+		<div class="row">
+			<div class="col-lg-6 col-md-5 col-sm-4">
+				<a href="{% url 'home' %}" class="text-decoration-none link-warning">Home</a>
+			</div>
+			<div class="col-lg-6 col-md-5 col-sm-4">
+				<a href="{% url 'about' %}" class="text-decoration-none link-primary">About</a>
+			</div>
+		</div>
+	{% else %}
+		<h3 class="text-center"> Black Tears Audition Form </h3>
+		<div class="container">
+		
+			<form method="post" enctype="multipart/form-data">
+				{% csrf_token %}
+				<div class="row">
+					<div class="col-lg-6 col-md-12">
+						{{ audit_form.first_name|as_crispy_field }}
+					</div>
+					<div class="col-lg-6 col-md-12">
+						{{ audit_form.last_name|as_crispy_field }}
+					</div>
+				</div>
+				<br/>
+				<br/>
+				<div class="row">
+					{{ audit_form.image|as_crispy_field }}
+				</div>
+				<br/>
+				<div class="row">
+					{{ audit_form.email|as_crispy_field }}
+				</div>
+				<br/>
+				<div class="row">
+					<div class="col-lg-6 col-md-12">
+						{{ audit_form.gender|as_crispy_field }}
+					</div>
+					<div class="col-lg-6 col-md-12">
+						{{ audit_form.phone_number|as_crispy_field }}
+					</div>
+				</div>
+				<br/>
+				<div class="row">
+					<div class="col-lg-6 col-md-12">
+						{{ audit_form.address|as_crispy_field }}
+					</div>
+					<div class="col-lg-6 col-md-12">
+						{{ audit_form.state|as_crispy_field }}
+					</div>
+				</div>
+				<br/>
+				<br/>
+				<h3 class="text-center"> The Parent Inaudit_formation Section</h3>
+				<p>This audit_form is to be </p>
+				<br/>
+				<div class="row">
+					{{ audit_form.guardian_name|as_crispy_field }}
+				</div>
+				<br/>
+				<div class="row">
+					<div class="col-lg-6 col-md-12">
+						{{ audit_form.guardian_email|as_crispy_field }}
+					</div>
+					<div class="col-lg-6 col-md-12">
+						{{ audit_form.guardian_phone_number|as_crispy_field }}
+					</div>
+				</div>
+				<br/>
+				<div class="row">
+					{{ audit_form.role_interested|as_crispy_field }}
+				</div>
+				<br/>
+				<div class="row">
+					{{ audit_form.list_any_talent_or_performing_experience|as_crispy_field }}
+				</div>
+				<br/>
+				<div class="row">
+					{{ audit_form.do_you_have_any_physical_limitation|as_crispy_field }}
+				</div>
+				<br/>
+				<div class="row">
+					{{ audit_form.will_you_consider_being_an_extra|as_crispy_field }}
+				</div>
+				<br/>
+				<div class="row">
+					{{ audit_form.will_you_consider_other_roles|as_crispy_field }}
+				</div>
+				<br/>
+				<div class="row">
+					{{ audit_form.will_you_help_with_production|as_crispy_field }}
+				</div>
+				<br/>
+				
+				<input type="submit" value="Submit" class='btn btn-primary'>
+			</form>
+		</div>
+	{% endif %}
+</div>
+{% endblock %}
