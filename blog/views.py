@@ -11,6 +11,9 @@ class HomePageView(TemplateView):
 class AboutPageView(TemplateView):
     template_name = 'about.html'
     
+class LatestView(TemplateView):
+    template_name = 'latest.html'
+    
 def AuditFormView(request):
     sent = False
     if request.method == 'POST':
